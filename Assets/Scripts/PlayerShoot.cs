@@ -83,7 +83,7 @@ public class PlayerShoot : NetworkBehaviour {
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range, mask))
         {
             Debug.Log(hit.collider.tag);
-            if (hit.collider.tag.Equals(PLAYER_TAG))
+            if (hit.collider.tag.Equals("RedTeam") || hit.collider.tag.Equals("BlueTeam"))
             {
                 CmdPlayerShot(hit.collider.name, weapon.damage);               
             }
