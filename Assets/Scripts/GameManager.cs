@@ -5,8 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
-
     public MatchSettings matchSettings;
+
+    private int RedTeamScore = 0;
+    private int BlueTeamScore = 0; 
 
     void Awake()
     {
